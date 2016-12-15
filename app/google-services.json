@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1097968553829",
+    "firebase_url": "https://bizme-aed78.firebaseio.com",
+    "project_id": "bizme-aed78",
+    "storage_bucket": "bizme-aed78.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1097968553829:android:67f32d2da1454d79",
+        "android_client_info": {
+          "package_name": "com.example.matthewlocker1.bizme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1097968553829-fj6rssqjs2gmlpm065l17eogv5rm55l0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9oJpcB0afbs287a9QZbarNJtqC1wVUis"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
