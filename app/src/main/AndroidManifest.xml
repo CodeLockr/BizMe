@@ -24,9 +24,7 @@
         </activity>
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".FeedActivity" />
-        <activity android:name=".SurveyActivity" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".MapsActivity" />
         <activity android:name=".BusinessActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
