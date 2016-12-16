@@ -26,17 +26,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/textViewTitle" />
-
-    <Button
-        android:text="Business 1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewTitle"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="125dp"
-        android:id="@+id/buttonBiz1" />
+        android:id="@+id/textViewTitle"
+        android:textStyle="normal|bold"
+        android:textSize="28sp"
+        android:textColor="@color/colorPrimaryDark" />
 
     <Button
         android:text="Business 2"
@@ -60,9 +53,9 @@
         android:layout_height="wrap_content"
         app:srcCompat="@mipmap/ic_launcher"
         android:layout_above="@+id/buttonBiz2"
-        android:layout_toStartOf="@+id/textViewTitle"
         android:layout_marginBottom="41dp"
-        android:id="@+id/imageViewBiz1" />
+        android:id="@+id/imageViewBiz1"
+        android:layout_alignParentStart="true" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -88,4 +81,46 @@
         android:id="@+id/buttonBiz3"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/buttonBiz1" />
+
+    <TextView
+        android:text="Business Content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonBiz2"
+        android:layout_alignStart="@+id/imageViewBiz1"
+        android:id="@+id/textViewBiz1" />
+
+    <TextView
+        android:text="Business Content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonBiz2"
+        android:layout_alignEnd="@+id/buttonBiz2"
+        android:id="@+id/textViewBiz2" />
+
+    <TextView
+        android:text="Business Content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonBiz3"
+        android:layout_alignStart="@+id/imageViewBiz3"
+        android:id="@+id/textViewBiz3" />
+
+    <TextView
+        android:text="Business Content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textViewBiz3"
+        android:layout_toEndOf="@+id/textViewTitle"
+        android:id="@+id/textViewBiz4"
+        android:layout_alignStart="@+id/buttonBiz4" />
+
+    <Button
+        android:text="Business 1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonBiz1"
+        android:layout_above="@+id/imageViewBiz3"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="64dp" />
 </RelativeLayout>

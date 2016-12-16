@@ -11,10 +11,10 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class BusinessActivity extends Activity {
+public class SurveyActivity extends Activity {
 
-    //this is the public profile of the business, taking information from the BizProfile activity
-    //users will be able to look at different businesses and from this page they can access missions
+    //this is a sample survey, part of the missions, and will draw data created by businesses in the MissionCreateActivity
+    //users access this survey from the business page and will be taken back to the business page after completing the survey
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -22,7 +22,7 @@ public class BusinessActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_business);
+        setContentView(R.layout.activity_survey);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -32,9 +32,9 @@ public class BusinessActivity extends Activity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
-                    Toast.makeText(BusinessActivity.this, "User Logged In: " + user.getEmail(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SurveyActivity.this, "User Logged In: " + user.getEmail(), Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(BusinessActivity.this, "Nobody Logged In", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SurveyActivity.this, "Nobody Logged In", Toast.LENGTH_SHORT).show();
                 }
             }
         };
@@ -58,10 +58,10 @@ public class BusinessActivity extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Intent intentMain = new Intent(BusinessActivity.this, MainActivity.class);
-        Intent intentFeed = new Intent(BusinessActivity.this, FeedActivity.class);
-        Intent intentMap = new Intent(BusinessActivity.this, MapsActivity.class);
-        Intent intentProfile = new Intent(BusinessActivity.this, ProfileActivity.class);
+        Intent intentMain = new Intent(SurveyActivity.this, MainActivity.class);
+        Intent intentFeed = new Intent(SurveyActivity.this, FeedActivity.class);
+        Intent intentMap = new Intent(SurveyActivity.this, MapsActivity.class);
+        Intent intentProfile = new Intent(SurveyActivity.this, ProfileActivity.class);
 
         if (mAuth.getCurrentUser() != null) {
             if (item.getItemId() == R.id.menuLogout) {
@@ -88,5 +88,6 @@ public class BusinessActivity extends Activity {
         getMenuInflater().inflate(R.menu.mainmenu, menu);
         return super.onCreateOptionsMenu(menu);
     }
+
 
 }

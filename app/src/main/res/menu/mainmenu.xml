@@ -6,6 +6,8 @@
         android:id="@+id/menuLogout" />
     <item android:title="Profile"
         android:id="@+id/menuProfile" />
+    <item android:title="Feed"
+        android:id="@+id/menuFeed" />
     <item android:title="Map"
         android:id="@+id/menuMap" />
 </menu>

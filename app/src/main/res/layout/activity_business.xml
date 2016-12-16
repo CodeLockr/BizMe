@@ -11,14 +11,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.matthewlocker1.bizme.BusinessActivity">
 
-    <TextView
-        android:text="Good Time Charley's"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/textViewCompanyName" />
-
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -54,5 +46,15 @@
         android:layout_toRightOf="@+id/textViewCompanyName"
         android:layout_toEndOf="@+id/textViewCompanyName"
         android:id="@+id/buttonRedeem" />
+
+    <TextView
+        android:text="Good Time Charley's"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewCompanyName"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="36sp"
+        android:textColor="@color/colorPrimaryDark" />
 
 </RelativeLayout>

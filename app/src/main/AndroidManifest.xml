@@ -23,11 +23,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegistrationActivity" />
-        <activity android:name=".LoginActivity" />
         <activity android:name=".FeedActivity" />
-        <activity android:name=".SurveyActivitiy" />
+        <activity android:name=".SurveyActivity" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".MapActivity" />
+        <activity android:name=".MapsActivity" />
         <activity android:name=".BusinessActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -47,7 +46,8 @@
         <activity android:name=".BizRegActivity" />
         <activity android:name=".BizLoginActivity" />
         <activity android:name=".BizProfileActivity" />
-        <activity android:name=".MissionCreateActivity"></activity>
+        <activity android:name=".MissionCreateActivity" />
+        <activity android:name=".SurveyActivity"></activity>
     </application>
 
 </manifest>
