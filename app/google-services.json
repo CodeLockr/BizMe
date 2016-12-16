@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "500580903573",
-    "firebase_url": "https://bizme-2543e.firebaseio.com",
-    "project_id": "bizme-2543e",
-    "storage_bucket": "bizme-2543e.appspot.com"
+    "project_number": "308294789503",
+    "firebase_url": "https://bizme-b7e8a.firebaseio.com",
+    "project_id": "bizme-b7e8a",
+    "storage_bucket": "bizme-b7e8a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:500580903573:android:67f32d2da1454d79",
+        "mobilesdk_app_id": "1:308294789503:android:67f32d2da1454d79",
         "android_client_info": {
           "package_name": "com.example.matthewlocker1.bizme"
         }
       },
       "oauth_client": [
         {
-          "client_id": "500580903573-g80qouori3sn0hgf47099kh5ceok5qmu.apps.googleusercontent.com",
+          "client_id": "308294789503-9aba9cevjp540e3nb1g3tgdobqnuvlj2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBwAZZTFrBYnA3p5htZWssbYSUBy-NtOVo"
+          "current_key": "AIzaSyCs7RReSK2UMwY7-uk6qHi0FrnwYd8xPus"
         }
       ],
       "services": {
@@ -32,7 +32,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "500580903573-g80qouori3sn0hgf47099kh5ceok5qmu.apps.googleusercontent.com",
+              "client_id": "308294789503-9aba9cevjp540e3nb1g3tgdobqnuvlj2.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
