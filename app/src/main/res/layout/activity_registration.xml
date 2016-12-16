@@ -23,19 +23,31 @@
         android:layout_marginLeft="9dp"
         android:layout_marginStart="9dp" />
 
-    <EditText
+    <Button
+        android:text="Log in!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Email"
-        android:ems="10"
-        android:layout_below="@+id/textViewLogo"
+        android:id="@+id/buttonGotoLogin"
+        android:background="@android:color/background_light"
+        android:textStyle="normal|bold"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@+id/textViewAlready"
+        android:layout_alignBottom="@+id/textViewAlready"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="55dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginTop="24dp"
-        android:id="@+id/editText" />
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="By signing up, you agree to our Terms and Privacy Policy."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewTerms"
+        android:textStyle="normal|bold|italic"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/buttonSignup"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp"
+        android:textAlignment="center" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -43,72 +55,43 @@
         android:inputType="textPersonName"
         android:text="Password"
         android:ems="10"
-        android:layout_below="@+id/editText2"
-        android:layout_alignLeft="@+id/editText2"
-        android:layout_alignStart="@+id/editText2"
-        android:layout_marginTop="12dp"
-        android:id="@+id/editText3" />
-
-    <Button
-        android:text="Sign in!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button"
-        android:background="@android:color/background_light"
-        android:textStyle="normal|bold"
-        android:textColor="@color/colorPrimary"
-        android:textSize="25sp"
-        android:layout_alignBaseline="@+id/textViewAlready"
-        android:layout_alignBottom="@+id/textViewAlready"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:text="Sign up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:textSize="25sp"
-        android:textAlignment="center"
-        android:textStyle="normal|bold"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/editText3"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/editTextRegPassword"
+        android:layout_below="@+id/editTextRegEmail"
+        android:layout_toStartOf="@+id/buttonGotoLogin" />
 
     <TextView
         android:text="LOGO AND WELCOME MESSAGE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="43dp"
         android:id="@+id/textViewLogo"
         android:textSize="30sp"
         android:textAlignment="center"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Username"
-        android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_below="@+id/editText"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText"
-        android:layout_marginTop="18dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="By signing up, you agree to our"
-        android:ems="10"
-        android:id="@+id/editText4"
-        android:layout_alignTop="@+id/button2"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="55dp" />
+        android:layout_marginTop="25dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Email"
+        android:ems="10"
+        android:layout_marginRight="55dp"
+        android:id="@+id/editTextRegEmail"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/textViewLogo"
+        android:layout_alignStart="@+id/editTextRegPassword" />
+
+    <Button
+        android:text="Sign up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonSignup"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/editTextRegPassword"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

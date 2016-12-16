@@ -33,7 +33,27 @@
         android:layout_marginLeft="34dp"
         android:layout_marginStart="34dp"
         android:layout_marginTop="42dp"
-        android:id="@+id/editTextUsername" />
+        android:id="@+id/editTextLoginEmail" />
+
+    <Button
+        android:text="Sign up!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/buttonGotoSignup"
+        android:textSize="20sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="Don't have an account?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@+id/buttonGotoSignup"
+        android:layout_alignBottom="@+id/buttonGotoSignup"
+        android:layout_alignEnd="@+id/textView4" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -41,42 +61,19 @@
         android:inputType="text"
         android:text="Password"
         android:ems="10"
+        android:id="@+id/editTextLoginPass"
         android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/editTextUsername"
-        android:layout_alignStart="@+id/editTextUsername"
-        android:id="@+id/editTextPassword" />
+        android:layout_alignStart="@+id/editTextLoginEmail" />
 
     <Button
         android:text="Login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="35dp"
         android:id="@+id/buttonLogin"
-        android:layout_below="@+id/editTextPassword"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="Sign up!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonSignup"
-        android:background="@android:color/background_light"
-        android:textStyle="normal|bold"
-        android:textColor="@color/colorPrimary"
-        android:layout_toEndOf="@+id/textView4"
-        android:textSize="30sp"
-        android:layout_toRightOf="@+id/textView4"
-        android:layout_alignParentBottom="true" />
-
-    <TextView
-        android:text="Don't have an account?"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView5"
+        android:layout_below="@+id/editTextLoginPass"
+        android:layout_alignEnd="@+id/textView"
         android:textSize="20sp"
-        android:layout_alignBaseline="@+id/buttonSignup"
-        android:layout_alignBottom="@+id/buttonSignup"
-        android:layout_alignRight="@+id/buttonLogin"
-        android:layout_alignEnd="@+id/buttonLogin" />
+        android:textStyle="normal|bold" />
 
 </RelativeLayout>
