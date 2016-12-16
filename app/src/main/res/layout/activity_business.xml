@@ -20,15 +20,6 @@
         android:layout_centerHorizontal="true"
         app:srcCompat="@mipmap/ic_launcher" />
 
-    <ProgressBar
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/progressBarCompany"
-        android:layout_below="@+id/textViewCompanyName"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp" />
-
     <Button
         android:text="Mission"
         android:layout_width="wrap_content"
@@ -56,5 +47,22 @@
         android:layout_centerHorizontal="true"
         android:textSize="36sp"
         android:textColor="@color/colorPrimaryDark" />
+
+    <TextView
+        android:text="Business Address:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textViewDistance"
+        android:layout_alignStart="@+id/buttonRedeem"
+        android:id="@+id/textViewAddress" />
+
+    <TextView
+        android:text="Distance from Business:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:id="@+id/textViewDistance"
+        android:layout_below="@+id/imageViewCompany"
+        android:layout_alignStart="@+id/buttonMission" />
 
 </RelativeLayout>

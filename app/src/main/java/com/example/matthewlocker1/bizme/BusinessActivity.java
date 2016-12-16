@@ -32,6 +32,8 @@ public class BusinessActivity extends Activity implements View.OnClickListener {
         buttonMission = (Button) findViewById(R.id.buttonMission);
         buttonRedeem = (Button) findViewById(R.id.buttonRedeem);
 
+        buttonMission.setOnClickListener(this);
+        buttonRedeem.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
 

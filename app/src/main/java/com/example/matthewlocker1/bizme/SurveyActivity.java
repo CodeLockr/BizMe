@@ -6,15 +6,33 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.RadioButton;
 import android.widget.Toast;
+
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class SurveyActivity extends Activity {
+public class SurveyActivity extends Activity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener {
 
     //this is a sample survey, part of the missions, and will draw data created by businesses in the MissionCreateActivity
-    //users access this survey from the business page and will be taken back to the business page after completing the survey
+    //users access this survey from the business page and will be taken back to the feed activity after completing the survey
+    //users will receive points for submitting a survey or completing a mission, and these points will be reflected on Profile
+
+
+    private Button buttonSubmit;
+    private RadioButton radioButton;
+    private RadioButton radioButton2;
+    private RadioButton radioButton3;
+    private RadioButton radioButton4;
+    private RadioButton radioButton5;
+    private RadioButton radioButton6;
+    private RadioButton radioButton7;
+    private RadioButton radioButton8;
+    private RadioButton radioButton9;
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -23,6 +41,30 @@ public class SurveyActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_survey);
+
+        buttonSubmit = (Button) findViewById(R.id.buttonSubmit);
+        radioButton = (RadioButton) findViewById(R.id.radioButton);
+        radioButton2 = (RadioButton) findViewById(R.id.radioButton2);
+        radioButton3 = (RadioButton) findViewById(R.id.radioButton3);
+        radioButton4 = (RadioButton) findViewById(R.id.radioButton4);
+        radioButton5 = (RadioButton) findViewById(R.id.radioButton5);
+        radioButton6 = (RadioButton) findViewById(R.id.radioButton6);
+        radioButton7 = (RadioButton) findViewById(R.id.radioButton7);
+        radioButton8 = (RadioButton) findViewById(R.id.radioButton8);
+        radioButton9 = (RadioButton) findViewById(R.id.radioButton9);
+
+
+        buttonSubmit.setOnClickListener(this);
+        radioButton.setOnCheckedChangeListener(this);
+        radioButton2.setOnCheckedChangeListener(this);
+        radioButton3.setOnCheckedChangeListener(this);
+        radioButton4.setOnCheckedChangeListener(this);
+        radioButton5.setOnCheckedChangeListener(this);
+        radioButton6.setOnCheckedChangeListener(this);
+        radioButton7.setOnCheckedChangeListener(this);
+        radioButton8.setOnCheckedChangeListener(this);
+        radioButton9.setOnCheckedChangeListener(this);
+
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -38,6 +80,26 @@ public class SurveyActivity extends Activity {
                 }
             }
         };
+    }
+
+
+    @Override
+    public void onClick(View v) {
+
+        if (v == buttonSubmit) {
+            Toast.makeText(SurveyActivity.this, "Thank you for participating in this Survey! +5 Points Added! ", Toast.LENGTH_LONG).show();
+
+            Intent intentFeed = new Intent (SurveyActivity.this, FeedActivity.class);
+            startActivity(intentFeed);
+
+        }
+
+    }
+
+
+    @Override
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
     }
 
     //added menus

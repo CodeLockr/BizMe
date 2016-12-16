@@ -10,4 +10,120 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.matthewlocker1.bizme.SurveyActivity">
 
+    <TextView
+        android:text="Welcome to Charleys' Survey!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textViewWelcome"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="22sp" />
+
+    <TextView
+        android:text="Question 1: What is your favorite room in Charleys?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewWelcome"
+        android:layout_alignStart="@+id/textViewWelcome"
+        android:layout_marginTop="11dp"
+        android:id="@+id/textView2" />
+
+    <TextView
+        android:text="Question 2: What is your favorite drink in Charleys?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginTop="133dp"
+        android:id="@+id/textView3" />
+
+    <TextView
+        android:text="Question 3: How often do you go to Trivia on Wednesdays?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginTop="119dp"
+        android:id="@+id/textView6" />
+
+    <RadioButton
+        android:text="Bar Area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButton"
+        android:layout_alignStart="@+id/radioButton"
+        android:id="@+id/radioButton2" />
+
+    <RadioButton
+        android:text="Patio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButton2"
+        android:layout_alignStart="@+id/radioButton2"
+        android:id="@+id/radioButton3" />
+
+    <RadioButton
+        android:text="Shooters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButton5"
+        android:layout_alignStart="@+id/radioButton5"
+        android:id="@+id/radioButton6" />
+
+    <RadioButton
+        android:text="Never"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView6"
+        android:layout_alignStart="@+id/radioButton6"
+        android:id="@+id/radioButton7" />
+
+    <RadioButton
+        android:text="All the time!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButton8"
+        android:layout_alignStart="@+id/radioButton8"
+        android:id="@+id/radioButton9" />
+
+    <RadioButton
+        android:text="Fishbowl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton4"
+        android:layout_below="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
+
+    <RadioButton
+        android:text="Once or Twice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton8"
+        android:layout_below="@+id/radioButton7"
+        android:layout_alignStart="@+id/radioButton7" />
+
+    <RadioButton
+        android:text="Main Room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton"
+        android:layout_below="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <RadioButton
+        android:text="Draft Beer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton5"
+        android:layout_below="@+id/radioButton4"
+        android:layout_alignStart="@+id/radioButton4" />
+
+    <Button
+        android:text="SUBMIT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/textView2"
+        android:id="@+id/buttonSubmit" />
 </RelativeLayout>
