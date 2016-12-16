@@ -11,6 +11,9 @@ import android.widget.EditText;
 
 public class ProfileActivity extends Activity implements View.OnClickListener {
 
+    //this is where users can view their Profile, edit their picture, and see their points
+    //businesses will be at the bottom of their profile so users can see business points as well
+
     private TextView textViewEmail;
     private ProgressBar progressBarBusiness1;
     private ProgressBar progressBarBusiness2;

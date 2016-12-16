@@ -10,6 +10,11 @@ import android.widget.TextView;
 
 public class FeedActivity extends Activity implements View.OnClickListener {
 
+    //this is the main feed where users are taken immediately after login, like a "home screen"
+    //there will be a scrolling list view of businesses that are updated and filterable
+    //missions will appear on the feed view and be indicated by a color around the business
+
+
     private Button buttonBiz1;
     private Button buttonBiz2;
     private Button buttonBiz3;

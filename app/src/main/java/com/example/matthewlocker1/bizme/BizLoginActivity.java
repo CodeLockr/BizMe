@@ -9,6 +9,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class BizLoginActivity extends Activity {
 
+    //This activity is where the business will log in and takes them to BizProfile
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -19,6 +19,10 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
+    //this is the login activity where users enter the app, and can log in to go to the FeedActivity
+    //they can be redirected to the registration page, and business users can be redirected to BizLogin
+
+
     private Button buttonLogin;
     private EditText editTextLoginEmail;
     private EditText editTextLoginPass;
