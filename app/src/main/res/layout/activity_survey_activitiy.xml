@@ -10,4 +10,127 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.matthewlocker1.bizme.SurveyActivitiy">
 
+    <RadioButton
+        android:text="RadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewQuestion1"
+        android:layout_alignStart="@+id/textViewQuestion1"
+        android:layout_marginTop="13dp"
+        android:id="@+id/radioButton" />
+
+    <RadioButton
+        android:text="RadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButton"
+        android:layout_alignStart="@+id/radioButton"
+        android:id="@+id/radioButton2" />
+
+    <RadioButton
+        android:text="RadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButton2"
+        android:layout_alignStart="@+id/radioButton2"
+        android:id="@+id/radioButton3" />
+
+    <RadioButton
+        android:text="RadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButton3"
+        android:layout_alignStart="@+id/radioButton3"
+        android:id="@+id/radioButton4" />
+
+    <RadioButton
+        android:text="RadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButton5"
+        android:layout_alignStart="@+id/radioButton5"
+        android:id="@+id/radioButton6" />
+
+    <RadioButton
+        android:text="RadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButton6"
+        android:layout_alignStart="@+id/radioButton6"
+        android:id="@+id/radioButton7" />
+
+    <RadioButton
+        android:text="RadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButton7"
+        android:layout_alignStart="@+id/radioButton7"
+        android:id="@+id/radioButton8" />
+
+    <TextView
+        android:text="Question 2:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/textViewQuestion2"
+        android:layout_below="@+id/radioButton4"
+        android:layout_alignStart="@+id/radioButton4" />
+
+    <RadioButton
+        android:text="RadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton5"
+        android:layout_below="@+id/textViewQuestion2"
+        android:layout_alignStart="@+id/textViewQuestion2" />
+
+    <TextView
+        android:text="Question 1:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:id="@+id/textViewQuestion1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Question 3:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButton8"
+        android:layout_alignStart="@+id/radioButton8"
+        android:layout_marginTop="10dp"
+        android:id="@+id/textViewQuestion3" />
+
+    <RadioButton
+        android:text="RadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewQuestion3"
+        android:layout_alignStart="@+id/textViewQuestion3"
+        android:id="@+id/radioButton9" />
+
+    <RadioButton
+        android:text="RadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButton9"
+        android:layout_alignStart="@+id/radioButton9"
+        android:id="@+id/radioButton10" />
+
+    <RadioButton
+        android:text="RadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButton10"
+        android:layout_alignStart="@+id/radioButton10"
+        android:id="@+id/radioButton11" />
+
+    <RadioButton
+        android:text="RadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButton11"
+        android:layout_alignEnd="@+id/radioButton11"
+        android:id="@+id/radioButton12" />
 </RelativeLayout>

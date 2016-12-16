@@ -84,6 +84,29 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         } else {
                             Intent intentFeed = new Intent(MainActivity.this, FeedActivity.class);
                             startActivity(intentFeed);
+
+                            /*
+                            new AlertDialog.Builder(MainActivity.this)
+                                    .setMessage("Where?")
+                                    .setNegativeButton("Go to Feed", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(
+                                                DialogInterface dialogInterface, int i) {
+                                            Intent intentFeed = new Intent(MainActivity.this, FeedActivity.class);
+                                            startActivity(intentFeed);
+// add Toasts to this for notification
+                                        }
+                                    })
+                                    .setPositiveButton("Go To Map View", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            Intent intentMap = new Intent(MainActivity.this, MapsActivity.class);
+                                            startActivity(intentMap);
+                                        }
+
+
+                                    })
+                                    .show(); */
                         }
 
 

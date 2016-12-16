@@ -12,7 +12,7 @@
     tools:context="com.example.matthewlocker1.bizme.BusinessActivity">
 
     <TextView
-        android:text="Company Name"
+        android:text="Good Time Charley's"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"

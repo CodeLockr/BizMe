@@ -10,19 +10,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.matthewlocker1.bizme.ProfileActivity">
 
-    <TextView
-        android:text="TextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3" />
-
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="31dp"
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewProfile"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/ic_launcher" />
 
     <ProgressBar
         style="@android:style/Widget.Holo.Light.ProgressBar.Large"
@@ -31,83 +26,6 @@
         android:layout_width="150dp"
         android:layout_above="@+id/editTextName"
         android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:text="Name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="37dp"
-        android:id="@+id/textViewName"
-        android:textSize="16sp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:layout_marginLeft="21dp"
-        android:layout_marginStart="21dp"
-        android:id="@+id/editTextName"
-        android:layout_alignBaseline="@+id/textViewName"
-        android:layout_alignBottom="@+id/textViewName"
-        android:layout_toRightOf="@+id/textViewName"
-        android:layout_toEndOf="@+id/textViewName"
-        android:layout_height="35dp" />
-
-    <TextView
-        android:text="User ID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editTextUserID"
-        android:layout_alignLeft="@+id/textViewName"
-        android:layout_alignStart="@+id/textViewName"
-        android:id="@+id/textViewUserID" />
-
-    <ImageButton
-        android:layout_height="60dp"
-        android:layout_marginTop="28dp"
-        android:id="@+id/buttonFacebook"
-        android:layout_width="150dp"
-        android:layout_below="@+id/textViewUserID"
-        android:layout_alignLeft="@+id/textViewUserID"
-        android:layout_alignStart="@+id/textViewUserID" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/editTextUserID"
-        android:layout_below="@+id/editTextName"
-        android:layout_alignLeft="@+id/editTextName"
-        android:layout_alignStart="@+id/editTextName" />
-
-    <ProgressBar
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/buttonFacebook"
-        android:layout_toLeftOf="@+id/imageView"
-        android:layout_toStartOf="@+id/imageView"
-        android:layout_marginTop="14dp"
-        android:id="@+id/progressBarBusiness1" />
-
-    <ProgressBar
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/progressBarBusiness1"
-        android:layout_toRightOf="@+id/buttonFacebook"
-        android:layout_toEndOf="@+id/buttonFacebook"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
-        android:id="@+id/progressBarBusiness2" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -121,9 +39,43 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/imageView2"
-        android:layout_toRightOf="@+id/imageView"
-        android:layout_toEndOf="@+id/imageView"
+        android:layout_toRightOf="@+id/imageViewProfile"
+        android:layout_toEndOf="@+id/imageViewProfile"
         android:id="@+id/imageView3" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBarBusiness1"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/imageView2"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="47dp" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/progressBarBusiness2"
+        android:layout_alignTop="@+id/progressBarBusiness1"
+        android:layout_toEndOf="@+id/imageView3" />
+
+    <TextView
+        android:text="Email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_centerVertical="true"
+        android:layout_alignEnd="@+id/progressBarBusiness1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignStart="@+id/imageViewProfile"
+        android:id="@+id/textViewEmail" />
 
 
 </RelativeLayout>
