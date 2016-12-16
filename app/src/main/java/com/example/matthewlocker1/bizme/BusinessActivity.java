@@ -6,15 +6,20 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class BusinessActivity extends Activity {
+public class BusinessActivity extends Activity implements View.OnClickListener {
 
     //this is the public profile of the business, taking information from the BizProfile activity
     //users will be able to look at different businesses and from this page they can access missions
+
+    private Button buttonMission;
+    private Button buttonRedeem;
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -23,6 +28,10 @@ public class BusinessActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_business);
+
+        buttonMission = (Button) findViewById(R.id.buttonMission);
+        buttonRedeem = (Button) findViewById(R.id.buttonRedeem);
+
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -38,6 +47,19 @@ public class BusinessActivity extends Activity {
                 }
             }
         };
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent intentMission = new Intent (BusinessActivity.this, SurveyActivity.class);
+        //Intent intentRedeem = new Intent (BusinessActivity.this, RedeemActivity.class);
+
+        if (v == buttonMission) {
+            startActivity(intentMission);
+        } else if (v == buttonRedeem) {
+            Toast.makeText(BusinessActivity.this, "Redeem Activity Coming Soon!", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     //added menus
@@ -88,5 +110,6 @@ public class BusinessActivity extends Activity {
         getMenuInflater().inflate(R.menu.mainmenu, menu);
         return super.onCreateOptionsMenu(menu);
     }
+
 
 }
