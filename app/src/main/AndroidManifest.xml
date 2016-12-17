@@ -45,7 +45,8 @@
         <activity android:name=".BizLoginActivity" />
         <activity android:name=".BizProfileActivity" />
         <activity android:name=".MissionCreateActivity" />
-        <activity android:name=".SurveyActivity"></activity>
+        <activity android:name=".SurveyActivity" />
+        <activity android:name=".BizSurveyViewActivity"></activity>
     </application>
 
 </manifest>
