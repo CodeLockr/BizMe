@@ -25,6 +25,7 @@ public class SurveyResult {
     public SurveyResult (String answer1, String answer2, String answer3, String answer4,
                          String answer5, String answer6, String answer7, String answer8,
                          String answer9, String email) {
+
         this.answer1 = answer1;
         this.answer2 = answer2;
         this.answer3 = answer3;
