@@ -6,16 +6,19 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class BizProfileActivity extends Activity {
+public class BizProfileActivity extends Activity implements View.OnClickListener {
 
     //this is where a business can view and edit their information
     //there will also be a button sending an intent to create a survey or other type of mission
 
+    private Button buttonViewSurvey;
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -24,6 +27,11 @@ public class BizProfileActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_biz_profile);
+
+        buttonViewSurvey = (Button) findViewById(R.id.buttonViewSurvey);
+
+
+        buttonViewSurvey.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -90,4 +98,13 @@ public class BizProfileActivity extends Activity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    @Override
+    public void onClick(View v) {
+
+        if (v == buttonViewSurvey) {
+            Intent intentView = new Intent (BizProfileActivity.this, BizSurveyViewActivity.class);
+            startActivity(intentView);
+        }
+
+    }
 }

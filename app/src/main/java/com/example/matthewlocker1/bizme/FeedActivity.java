@@ -30,6 +30,7 @@ public class FeedActivity extends Activity implements View.OnClickListener {
     private Button buttonBiz2;
     private Button buttonBiz3;
     private Button buttonBiz4;
+    private Button buttonToBusiness;
     private ImageView imageViewBiz1;
     private ImageView imageViewBiz2;
     private ImageView imageViewBiz3;
@@ -47,6 +48,7 @@ public class FeedActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feed);
 
+        buttonToBusiness = (Button) findViewById(R.id.buttonToBusiness);
         buttonBiz1 = (Button) findViewById(R.id.buttonBiz1);
         buttonBiz2 = (Button) findViewById(R.id.buttonBiz2);
         buttonBiz3 = (Button) findViewById(R.id.buttonBiz3);
@@ -60,6 +62,7 @@ public class FeedActivity extends Activity implements View.OnClickListener {
         textViewBiz3 = (TextView) findViewById(R.id.textViewBiz3);
         textViewBiz4 = (TextView) findViewById(R.id.textViewBiz4);
 
+        buttonToBusiness.setOnClickListener(this);
         buttonBiz1.setOnClickListener(this);
         buttonBiz2.setOnClickListener(this);
         buttonBiz3.setOnClickListener(this);
@@ -98,6 +101,9 @@ public class FeedActivity extends Activity implements View.OnClickListener {
         }  else if (v == buttonBiz4) {
             Intent intentBiz4 = new Intent(FeedActivity.this, BusinessActivity.class);
             startActivity(intentBiz4);
+        } else if (v == buttonToBusiness){
+            Intent intentBusinessView = new Intent (FeedActivity.this, BizProfileActivity.class);
+            startActivity(intentBusinessView);
         }
 
     }

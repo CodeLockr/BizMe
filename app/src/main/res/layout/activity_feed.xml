@@ -123,4 +123,21 @@
         android:id="@+id/textViewBiz2"
         android:layout_above="@+id/buttonBiz2"
         android:layout_alignEnd="@+id/buttonBiz2" />
+
+    <TextView
+        android:text="Are You This Business? -->"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewQuestion"
+        android:textSize="12sp"
+        android:layout_below="@+id/buttonBiz2"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Business View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonToBusiness"
+        android:layout_below="@+id/textViewQuestion"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
