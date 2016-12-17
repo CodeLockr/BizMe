@@ -87,8 +87,8 @@ public class RegistrationActivity extends Activity implements View.OnClickListen
                                     Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(RegistrationActivity.this, "Registration succesful", Toast.LENGTH_SHORT).show();
-                            Intent intentFeed = new Intent(RegistrationActivity.this, FeedActivity.class);
-                            startActivity(intentFeed);
+                            Intent intentTutorial = new Intent(RegistrationActivity.this, TutorialActivity.class);
+                            startActivity(intentTutorial);
 
                             /*
                             new AlertDialog.Builder(MainActivity.this)
