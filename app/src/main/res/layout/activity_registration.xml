@@ -27,7 +27,7 @@
         android:text="Log in!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/buttonGotoLogin"
+        android:id="@+id/buttonLogin"
         android:background="@android:color/background_light"
         android:textStyle="normal|bold"
         android:textColor="@color/colorPrimary"
@@ -57,7 +57,7 @@
         android:ems="10"
         android:id="@+id/editTextRegPassword"
         android:layout_below="@+id/editTextRegEmail"
-        android:layout_toStartOf="@+id/buttonGotoLogin" />
+        android:layout_toStartOf="@+id/buttonLogin" />
 
     <TextView
         android:text="LOGO AND WELCOME MESSAGE"

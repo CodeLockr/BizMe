@@ -1,8 +1,6 @@
 package com.example.matthewlocker1.bizme;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -29,6 +27,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private EditText editTextLoginEmail;
     private EditText editTextLoginPass;
     private Button buttonGotoSignup;
+    private Button buttonChange;
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -41,10 +40,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
         buttonLogin= (Button) findViewById(R.id.buttonLogin);
         editTextLoginEmail= (EditText) findViewById(R.id.editTextLoginEmail);
         editTextLoginPass=(EditText) findViewById(R.id.editTextLoginPass);
-        buttonGotoSignup= (Button) findViewById(R.id.buttonGotoSignup);
+        buttonGotoSignup= (Button) findViewById(R.id.buttonSwitch);
+        buttonChange = (Button) findViewById(R.id.buttonSignup);
 
         buttonLogin.setOnClickListener(this);
         buttonGotoSignup.setOnClickListener(this);
+        buttonChange.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -73,7 +74,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }else if (view==buttonGotoSignup){
             Intent intentSignup= new Intent(MainActivity.this, RegistrationActivity.class);
             startActivity(intentSignup);
-
+        }
+        else if (view == buttonChange) {
+            Intent intentChange = new Intent(MainActivity.this, BizLoginActivity.class);
+            startActivity(intentChange);
         }
 
     }

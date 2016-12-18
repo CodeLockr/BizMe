@@ -66,14 +66,14 @@
         android:text="Email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView"
+        android:id="@+id/textViewUserType"
         android:layout_centerVertical="true"
         android:layout_alignEnd="@+id/progressBarBusiness1" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView"
+        android:layout_alignBottom="@+id/textViewUserType"
         android:layout_alignStart="@+id/imageViewProfile"
         android:id="@+id/textViewEmail" />
 

@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -38,7 +36,7 @@ public class RegistrationActivity extends Activity implements View.OnClickListen
         buttonSignup = (Button) findViewById(R.id.buttonSignup);
         editTextRegEmail = (EditText) findViewById(R.id.editTextRegEmail);
         editTextRegPassword = (EditText) findViewById(R.id.editTextRegPassword);
-        buttonGotoLogin = (Button) findViewById(R.id.buttonGotoLogin);
+        buttonGotoLogin = (Button) findViewById(R.id.buttonLogin);
 
         buttonSignup.setOnClickListener(this);
         buttonGotoLogin.setOnClickListener(this);

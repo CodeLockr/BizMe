@@ -10,31 +10,73 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.matthewlocker1.bizme.BizRegActivity">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Email"
-        android:ems="10"
-        android:layout_below="@+id/textViewLogo"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="55dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginTop="24dp"
-        android:id="@+id/editTextRegEmail" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="120dp">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Password"
-        android:ems="10"
-        android:layout_below="@+id/editTextRegUsername"
-        android:layout_alignLeft="@+id/editTextRegUsername"
-        android:layout_alignStart="@+id/editTextRegUsername"
-        android:layout_marginTop="12dp"
-        android:id="@+id/editTextRegPassword" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:layout_below="@+id/textViewLogo"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="55dp"
+                android:id="@+id/editTextRegEmail"
+                android:hint="Email" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editTextRegPassword"
+                android:layout_below="@+id/editTextRegEmail"
+                android:layout_alignLeft="@+id/editTextRegEmail"
+                android:layout_alignStart="@+id/editTextRegEmail"
+                android:hint="Password" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editTextName"
+                android:hint="Company Name" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editTextLong"
+                android:hint="Longitude" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editTextLat"
+                android:hint="Latitude" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/editTextDescription"
+                android:hint="Description" />
+
+        </LinearLayout>
+    </ScrollView>
 
     <TextView
         android:text="LOGO AND WELCOME MESSAGE"
@@ -48,23 +90,11 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Username"
-        android:ems="10"
-        android:id="@+id/editTextRegUsername"
-        android:layout_below="@+id/editTextRegEmail"
-        android:layout_alignLeft="@+id/editTextRegEmail"
-        android:layout_alignStart="@+id/editTextRegEmail"
-        android:layout_marginTop="18dp" />
-
     <Button
         android:text="Log in!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/buttonGotoLogin"
+        android:id="@+id/buttonLogin"
         android:background="@android:color/background_light"
         android:textStyle="normal|bold"
         android:textColor="@color/colorPrimary"
@@ -79,34 +109,22 @@
         android:id="@+id/textViewAlready"
         android:textSize="20sp"
         android:layout_marginLeft="9dp"
-        android:layout_alignBaseline="@+id/buttonGotoLogin"
-        android:layout_alignBottom="@+id/buttonGotoLogin"
+        android:layout_alignBaseline="@+id/buttonLogin"
+        android:layout_alignBottom="@+id/buttonLogin"
         android:layout_alignParentStart="true" />
 
-    <TextView
-        android:text="Terms and Conditions."
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textTerms"
-        android:textColor="@color/colorPrimary"
-        android:textStyle="normal|bold"
-        android:textSize="10sp"
-        android:textAlignment="textStart"
-        android:layout_alignBaseline="@+id/editText4"
-        android:layout_alignBottom="@+id/editText4"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="29dp" />
 
     <TextView
         android:text="By signing up, you agree to our Terms and Privacy Policy."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textViewTerms"
-        android:layout_below="@+id/buttonSignup"
-        android:layout_centerHorizontal="true"
         android:textStyle="normal|bold|italic"
         android:textColor="@color/colorPrimary"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:layout_above="@+id/buttonLogin"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="46dp" />
 
     <Button
         android:text="Sign up"
@@ -116,7 +134,8 @@
         android:textSize="25sp"
         android:textAlignment="center"
         android:textStyle="normal|bold"
-        android:layout_below="@+id/editTextRegPassword"
-        android:layout_centerHorizontal="true" />
+        android:layout_above="@+id/textViewAlready"
+        android:layout_alignEnd="@+id/textViewAlready"
+        android:layout_marginBottom="8dp" />
 
 </RelativeLayout>
