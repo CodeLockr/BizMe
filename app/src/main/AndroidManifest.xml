@@ -48,7 +48,8 @@
         <activity android:name=".SurveyActivity" />
         <activity android:name=".BizSurveyViewActivity" />
         <activity android:name=".TutorialActivity" />
-        <activity android:name=".SurveyTwoActivity"></activity>
+        <activity android:name=".SurveyTwoActivity" />
+        <activity android:name=".RedeemActivity"></activity>
     </application>
 
 </manifest>
