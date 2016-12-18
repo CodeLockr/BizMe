@@ -173,7 +173,7 @@ public class SurveyTwoActivity extends Activity implements CompoundButton.OnChec
 
 
     }
-    
+
     @Override
     public void onStart() {
         super.onStart();

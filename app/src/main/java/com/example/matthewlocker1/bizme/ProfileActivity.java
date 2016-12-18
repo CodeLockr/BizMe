@@ -23,9 +23,6 @@ public class ProfileActivity extends Activity implements View.OnClickListener {
     //businesses will be at the bottom of their profile so users can see business points as well
 
     private TextView textViewEmail;
-    private ProgressBar progressBarBusiness1;
-    private ProgressBar progressBarBusiness2;
-    private ProgressBar progressBarMainProgress;
     private ImageView imageViewProfile;
 
     private FirebaseAuth mAuth;
@@ -37,9 +34,6 @@ public class ProfileActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_profile);
 
         textViewEmail = (TextView) findViewById(R.id.textViewEmail);
-        progressBarBusiness1 = (ProgressBar) findViewById(R.id.progressBarBusiness1);
-        progressBarBusiness2 = (ProgressBar) findViewById(R.id.progressBarBusiness2);
-        progressBarMainProgress = (ProgressBar) findViewById(R.id.progressBarMainProgress);
         imageViewProfile = (ImageView) findViewById(R.id.imageViewProfile);
 
         mAuth = FirebaseAuth.getInstance();
@@ -60,6 +54,8 @@ public class ProfileActivity extends Activity implements View.OnClickListener {
                 // ...
             }
         };
+
+
 
 
     }
