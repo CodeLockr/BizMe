@@ -144,7 +144,7 @@ public class BizSurveyViewActivity extends Activity implements View.OnClickListe
 
             });
 
-            Toast.makeText(this, "Survey Results From the Last Two Users", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Showing Survey Results From the Most Recent User", Toast.LENGTH_SHORT).show();
 
         }
     }
