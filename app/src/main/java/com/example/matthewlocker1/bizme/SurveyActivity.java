@@ -25,7 +25,7 @@ public class SurveyActivity extends Activity implements View.OnClickListener, Co
     //users access this survey from the business page and will be taken back to the feed activity after completing the survey
     //users will receive points for submitting a survey or completing a mission, and these points will be reflected on Profile
 
-    //This activity was working, and then broke so we created a second survey
+    //This activity was working, and then broke the app so we created a second survey (Survey Two Activity)
     //However, the survey as it is written here is coded so to make it easier to aggregate the data for Market Research
 
 

@@ -8,10 +8,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class BizProfileActivity extends Activity implements View.OnClickListener {
 
@@ -19,6 +22,9 @@ public class BizProfileActivity extends Activity implements View.OnClickListener
     //there will also be a button sending an intent to create a survey or other type of mission
 
     private Button buttonViewSurvey;
+    private EditText editTextDealCreate;
+    private Button buttonSubmitDeal;
+    private Button buttonCreateSurvey;
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -29,9 +35,13 @@ public class BizProfileActivity extends Activity implements View.OnClickListener
         setContentView(R.layout.activity_biz_profile);
 
         buttonViewSurvey = (Button) findViewById(R.id.buttonViewSurvey);
-
+        editTextDealCreate = (EditText) findViewById(R.id.editTextDealCreate);
+        buttonSubmitDeal = (Button) findViewById(R.id.buttonSubmitDeal);
+        buttonCreateSurvey = (Button) findViewById(R.id.buttonCreateSurvey);
 
         buttonViewSurvey.setOnClickListener(this);
+        buttonSubmitDeal.setOnClickListener(this);
+        buttonCreateSurvey.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -104,7 +114,21 @@ public class BizProfileActivity extends Activity implements View.OnClickListener
         if (v == buttonViewSurvey) {
             Intent intentView = new Intent (BizProfileActivity.this, BizSurveyViewActivity.class);
             startActivity(intentView);
+        } else if (v == buttonCreateSurvey) {
+            Toast.makeText(this, "Create Survey Coming Soon", Toast.LENGTH_SHORT).show();
+
+        } else if (v == buttonSubmitDeal) {
+            //insert code for sending the edit text to Firebase
+            String deal = editTextDealCreate.getText().toString();
+
+            FirebaseDatabase database = FirebaseDatabase.getInstance();
+            DatabaseReference dataDealSubmit = database.getReference("Deals");
+            DatabaseReference dataNewDealSubmit = dataDealSubmit.push();
+            dataNewDealSubmit.setValue(deal);
+            
+            Toast.makeText(this, "Thank you for submitting your deal! Users can now see it on Business Activity", Toast.LENGTH_SHORT).show();
         }
+
 
     }
 }

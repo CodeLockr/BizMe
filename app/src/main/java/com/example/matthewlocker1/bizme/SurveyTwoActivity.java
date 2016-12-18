@@ -80,7 +80,7 @@ public class SurveyTwoActivity extends Activity implements CompoundButton.OnChec
     @Override
     public void onClick(View v) {
 
-        Toast.makeText(SurveyTwoActivity.this, "Thank you for participating in this Survey! +5 Points Added! ", Toast.LENGTH_LONG).show();
+
 
 
         if (radioButtonYes.isChecked()) {
@@ -102,12 +102,11 @@ public class SurveyTwoActivity extends Activity implements CompoundButton.OnChec
 
         String email = mAuth.getCurrentUser().getEmail();
         String favorite = editTextAnswer.getText().toString();
-        String company = "Charleys";
+        String company = "Charley's";
 
         SurveyClass surveyClass = new SurveyClass (yes, no, sunday, tuesday, favorite, email, company);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-
 
         DatabaseReference dataSurveySubmit = database.getReference("Yes");
         DatabaseReference dataNewSurveySubmit = dataSurveySubmit.push();
@@ -129,6 +128,13 @@ public class SurveyTwoActivity extends Activity implements CompoundButton.OnChec
         //Toast.makeText(this, surveyClass.yes, Toast.LENGTH_SHORT).show();
         dataNewSurveySubmit3.setValue(surveyClass.sunday);
 
+        DatabaseReference dataSurveySubmitCompany = database.getReference("Company");
+        DatabaseReference dataNewSurveySubmitCompany = dataSurveySubmit3.push();
+        //Toast.makeText(this, surveyClass.yes, Toast.LENGTH_SHORT).show();
+        dataNewSurveySubmitCompany.setValue(surveyClass.company);
+
+
+        Toast.makeText(SurveyTwoActivity.this, "Thank you for participating in this Survey! +5 Points Added! ", Toast.LENGTH_LONG).show();
 
         Intent intentFeed = new Intent (SurveyTwoActivity.this, FeedActivity.class);
         startActivity(intentFeed);

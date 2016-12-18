@@ -82,7 +82,6 @@
         android:layout_alignStart="@+id/textViewAnswer9" />
 
     <TextView
-        android:text="Results Here:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textViewAnswers"

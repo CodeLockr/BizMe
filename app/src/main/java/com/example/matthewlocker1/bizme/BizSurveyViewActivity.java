@@ -87,11 +87,10 @@ public class BizSurveyViewActivity extends Activity implements View.OnClickListe
 
         if (v == buttonUpdate) {
 
-            Toast.makeText(this, "Survey Results From the Last Two Users", Toast.LENGTH_SHORT).show();
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference dataSurveyResults = database.getReference();
-        dataSurveyResults.child("Question 2").orderByKey().limitToLast(2).addChildEventListener(new ChildEventListener() {
+        DatabaseReference dataSurveySubmit = database.getReference();
+        dataSurveySubmit.child("Question 2").orderByKey().limitToLast(1).addChildEventListener(new ChildEventListener() {
 
 
 
@@ -99,22 +98,28 @@ public class BizSurveyViewActivity extends Activity implements View.OnClickListe
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
 
 
-                /* SurveyResult surveyResult = dataSnapshot.getValue(SurveyResult.class);
-
-                String val = textViewAnswers.getText().toString();
-                val = val + "\n \n User: " + surveyResult.email + "\n Answer 1: " + surveyResult.answer1 + "\n Answer 2: "
-                        + surveyResult.answer2 + "\n Answer 3: " + surveyResult.answer3 + "\n Answer 4: " + surveyResult.answer4 + "\n Answer 5: "
-                        + surveyResult.answer5 + "\n Answer 6: " + surveyResult.answer6 + "\n Answer 7: "
-                        + surveyResult.answer7 + "\n Answer 8: " + surveyResult.answer8 + "\n Answer 9: " + surveyResult.answer9;
-                textViewAnswers.setText(val);
-                */
+                /*
+                // Code below causes unknown error in Firebase and crashes the app; however in theory should work.
 
                 SurveyClass surveyClass = dataSnapshot.getValue(SurveyClass.class);
-                String val = textViewAnswers.getText().toString();
-                val = val
-                        //+ "\n User: " + surveyClass.email
-                        + "Favorite Drink: " + surveyClass.favorite;
-                textViewAnswers.setText(val);
+                String value = textViewAnswers.getText().toString();
+                value = value + "\n Have you been to Trivia: " + "Yes: " + surveyClass.yes + "; No: " + surveyClass.no
+                        + "\n Favorite Drink: " + surveyClass.favorite
+                        + "\n Sunday or Tuesday: " + "Sunday: " + surveyClass.sunday + "; Tuesday: " + surveyClass.tuesday
+                        + "\n User: " + surveyClass.email + "\n Company: " + surveyClass.company;
+
+                textViewAnswers.setText(value);
+
+                */
+
+                //dummy values to show concept for Survey View
+
+                String value = textViewAnswers.getText().toString();
+                value = value + "\n Have you been to Trivia? " + "Yes" +
+                        "\n Favorite Drink: " + "My favorite drink is beer."
+                        + "\n Karaoke on Tuesday or Sunday? " + "Sunday";
+                textViewAnswers.setText(value);
+
 
             }
 
@@ -138,6 +143,8 @@ public class BizSurveyViewActivity extends Activity implements View.OnClickListe
 
 
             });
+
+            Toast.makeText(this, "Survey Results From the Last Two Users", Toast.LENGTH_SHORT).show();
 
         }
     }

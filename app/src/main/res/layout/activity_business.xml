@@ -11,33 +11,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.matthewlocker1.bizme.BusinessActivity">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:id="@+id/imageViewCompany"
-        android:layout_below="@+id/textViewCompanyName"
-        android:layout_centerHorizontal="true"
-        app:srcCompat="@mipmap/ic_launcher" />
-
-    <Button
-        android:text="Mission"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/textViewCompanyName"
-        android:layout_toStartOf="@+id/textViewCompanyName"
-        android:id="@+id/buttonMission" />
-
-    <Button
-        android:text="Redeem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/buttonMission"
-        android:layout_toRightOf="@+id/textViewCompanyName"
-        android:layout_toEndOf="@+id/textViewCompanyName"
-        android:id="@+id/buttonRedeem" />
-
     <TextView
         android:text="Good Time Charley's"
         android:layout_width="wrap_content"
@@ -48,23 +21,6 @@
         android:textSize="36sp"
         android:textColor="@color/colorPrimaryDark" />
 
-    <TextView
-        android:text="Business Address:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textViewDistance"
-        android:layout_alignStart="@+id/buttonRedeem"
-        android:id="@+id/textViewAddress" />
-
-    <TextView
-        android:text="Distance from Business:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:id="@+id/textViewDistance"
-        android:layout_below="@+id/imageViewCompany"
-        android:layout_alignStart="@+id/buttonMission" />
-
     <Button
         android:text="Survey"
         android:layout_width="wrap_content"
@@ -74,5 +30,41 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="115dp"
         android:id="@+id/buttonSurvey" />
+
+    <Button
+        android:text="Redeem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonRedeem"
+        android:layout_above="@+id/buttonSurvey"
+        android:layout_alignEnd="@+id/textViewCompanyName"
+        android:layout_marginEnd="17dp" />
+
+    <TextView
+        android:text="Deal: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewDeal"
+        android:layout_below="@+id/imageViewCompany"
+        android:layout_alignStart="@+id/buttonMission" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:id="@+id/imageViewCompany"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:layout_below="@+id/textViewCompanyName"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Mission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonMission"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="81dp"
+        android:layout_below="@+id/textViewDeal"
+        android:layout_alignStart="@+id/textViewCompanyName" />
 
 </RelativeLayout>
