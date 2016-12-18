@@ -102,8 +102,9 @@ public class SurveyTwoActivity extends Activity implements CompoundButton.OnChec
 
         String email = mAuth.getCurrentUser().getEmail();
         String favorite = editTextAnswer.getText().toString();
+        String company = "Charleys";
 
-        SurveyClass surveyClass = new SurveyClass (yes, no, sunday, tuesday, favorite, email);
+        SurveyClass surveyClass = new SurveyClass (yes, no, sunday, tuesday, favorite, email, company);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
 
@@ -116,7 +117,7 @@ public class SurveyTwoActivity extends Activity implements CompoundButton.OnChec
         DatabaseReference dataSurveySubmitNo = database.getReference("No");
         DatabaseReference dataNewSurveySubmitNo = dataSurveySubmitNo.push();
         //Toast.makeText(this, surveyClass.yes, Toast.LENGTH_SHORT).show();
-        dataNewSurveySubmit.setValue(surveyClass.no);
+        dataNewSurveySubmitNo.setValue(surveyClass.no);
 
         DatabaseReference dataSurveySubmit2 = database.getReference("Question 2");
         DatabaseReference dataNewSurveySubmit2 = dataSurveySubmit2.push();
