@@ -61,6 +61,8 @@ public class ProfileActivity extends Activity implements View.OnClickListener {
         };
 
 
+        String currentUser = mAuth.getCurrentUser().getEmail();
+        textViewEmail.setText(currentUser);
 
 
     }
