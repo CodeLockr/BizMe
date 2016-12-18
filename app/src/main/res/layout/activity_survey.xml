@@ -47,79 +47,6 @@
         android:layout_marginTop="119dp"
         android:id="@+id/textView6" />
 
-    <RadioButton
-        android:text="Bar Area"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/radioButton1"
-        android:layout_alignStart="@+id/radioButton1"
-        android:id="@+id/radioButton2" />
-
-    <RadioButton
-        android:text="Patio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/radioButton2"
-        android:layout_alignStart="@+id/radioButton2"
-        android:id="@+id/radioButton3" />
-
-    <RadioButton
-        android:text="Shooters"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/radioButton5"
-        android:layout_alignStart="@+id/radioButton5"
-        android:id="@+id/radioButton6" />
-
-    <RadioButton
-        android:text="Never"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView6"
-        android:layout_alignStart="@+id/radioButton6"
-        android:id="@+id/radioButton7" />
-
-    <RadioButton
-        android:text="All the time!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/radioButton8"
-        android:id="@+id/radioButton9"
-        android:layout_below="@+id/radioButton7"
-        android:layout_marginTop="30dp" />
-
-    <RadioButton
-        android:text="Fishbowl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/radioButton4"
-        android:layout_below="@+id/textView3"
-        android:layout_alignStart="@+id/textView3" />
-
-    <RadioButton
-        android:text="Once or Twice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/radioButton8"
-        android:layout_below="@+id/radioButton7"
-        android:layout_alignStart="@+id/radioButton7" />
-
-    <RadioButton
-        android:text="Main Room"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/radioButton1"
-        android:layout_below="@+id/textView2"
-        android:layout_alignStart="@+id/textView2" />
-
-    <RadioButton
-        android:text="Draft Beer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/radioButton5"
-        android:layout_below="@+id/radioButton4"
-        android:layout_alignStart="@+id/radioButton4" />
-
     <Button
         android:text="SUBMIT"
         android:layout_width="wrap_content"
@@ -127,4 +54,113 @@
         android:layout_alignParentBottom="true"
         android:layout_alignEnd="@+id/textView2"
         android:id="@+id/buttonSubmit" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginTop="16dp"
+        android:id="@+id/radioGroup11">
+
+        <RadioButton
+            android:text="Main Room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton1"
+            android:layout_below="@+id/textView2"
+            android:layout_alignStart="@+id/textView2"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="Bar Area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioButton1"
+            android:layout_alignStart="@+id/radioButton1"
+            android:id="@+id/radioButton2"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="Patio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioButton2"
+            android:layout_alignStart="@+id/radioButton2"
+            android:id="@+id/radioButton3"
+            android:layout_weight="1" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup5"
+        android:layout_below="@+id/textView3"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_marginTop="15dp">
+
+        <RadioButton
+            android:text="Fishbowl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton4"
+            android:layout_below="@+id/textView3"
+            android:layout_alignStart="@+id/textView3"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="Draft Beer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton5"
+            android:layout_below="@+id/radioButton4"
+            android:layout_alignStart="@+id/radioButton4"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="Shooters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioButton5"
+            android:layout_alignStart="@+id/radioButton5"
+            android:id="@+id/radioButton6"
+            android:layout_weight="1" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup6"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView6">
+
+        <RadioButton
+            android:text="Never"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView6"
+            android:layout_alignStart="@+id/radioButton6"
+            android:id="@+id/radioButton7"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="Once or Twice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton8"
+            android:layout_below="@+id/radioButton7"
+            android:layout_alignStart="@+id/radioButton7"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="All the time!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/radioButton8"
+            android:id="@+id/radioButton9"
+            android:layout_below="@+id/radioButton7"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1" />
+    </RadioGroup>
 </RelativeLayout>

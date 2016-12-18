@@ -23,6 +23,7 @@ public class BizSurveyViewActivity extends Activity implements View.OnClickListe
 
     private TextView textViewAnswers;
 
+
     private TextView textViewAnswer1;
     private TextView textViewAnswer2;
     private TextView textViewAnswer3;
@@ -32,6 +33,7 @@ public class BizSurveyViewActivity extends Activity implements View.OnClickListe
     private TextView textViewAnswer7;
     private TextView textViewAnswer8;
     private TextView textViewAnswer9;
+
 
     private Button buttonUpdate;
 
@@ -45,6 +47,7 @@ public class BizSurveyViewActivity extends Activity implements View.OnClickListe
 
         textViewAnswers = (TextView) findViewById(R.id.textViewAnswers);
 
+
         textViewAnswer1 = (TextView) findViewById(R.id.textViewAnswer1);
         textViewAnswer2 = (TextView) findViewById(R.id.textViewAnswer2);
         textViewAnswer3 = (TextView) findViewById(R.id.textViewAnswer3);
@@ -54,6 +57,8 @@ public class BizSurveyViewActivity extends Activity implements View.OnClickListe
         textViewAnswer7 = (TextView) findViewById(R.id.textViewAnswer7);
         textViewAnswer8 = (TextView) findViewById(R.id.textViewAnswer8);
         textViewAnswer9 = (TextView) findViewById(R.id.textViewAnswer9);
+
+
 
         buttonUpdate = (Button) findViewById(R.id.buttonUpdate);
 
@@ -80,23 +85,36 @@ public class BizSurveyViewActivity extends Activity implements View.OnClickListe
     @Override
     public void onClick(View v) {
 
+        if (v == buttonUpdate) {
+
+            Toast.makeText(this, "Survey Results From the Last Two Users", Toast.LENGTH_SHORT).show();
+
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference dataSurveyResults = database.getReference();
-        dataSurveyResults.child("SurveyResults").orderByKey().limitToLast(2).addChildEventListener(new ChildEventListener() {
+        dataSurveyResults.child("Question 2").orderByKey().limitToLast(2).addChildEventListener(new ChildEventListener() {
+
 
 
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
 
-                SurveyResult surveyResult = dataSnapshot.getValue(SurveyResult.class);
+
+                /* SurveyResult surveyResult = dataSnapshot.getValue(SurveyResult.class);
+
                 String val = textViewAnswers.getText().toString();
                 val = val + "\n \n User: " + surveyResult.email + "\n Answer 1: " + surveyResult.answer1 + "\n Answer 2: "
-                + surveyResult.answer2 + "\n Answer 3: " + surveyResult.answer3 + "\n Answer 4: " + surveyResult.answer4 + "\n Answer 5: "
+                        + surveyResult.answer2 + "\n Answer 3: " + surveyResult.answer3 + "\n Answer 4: " + surveyResult.answer4 + "\n Answer 5: "
                         + surveyResult.answer5 + "\n Answer 6: " + surveyResult.answer6 + "\n Answer 7: "
                         + surveyResult.answer7 + "\n Answer 8: " + surveyResult.answer8 + "\n Answer 9: " + surveyResult.answer9;
-                //+ postObject.postTime + "\n";
                 textViewAnswers.setText(val);
+                */
 
+                SurveyClass surveyClass = dataSnapshot.getValue(SurveyClass.class);
+                String val = textViewAnswers.getText().toString();
+                val = val
+                        //+ "\n User: " + surveyClass.email
+                        + "Favorite Drink: " + surveyClass.favorite;
+                textViewAnswers.setText(val);
 
             }
 
@@ -119,7 +137,9 @@ public class BizSurveyViewActivity extends Activity implements View.OnClickListe
             }
 
 
-        });
+            });
+
+        }
     }
 
 

@@ -20,6 +20,7 @@ public class BusinessActivity extends Activity implements View.OnClickListener {
 
     private Button buttonMission;
     private Button buttonRedeem;
+    private Button buttonSurvey;
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -31,9 +32,11 @@ public class BusinessActivity extends Activity implements View.OnClickListener {
 
         buttonMission = (Button) findViewById(R.id.buttonMission);
         buttonRedeem = (Button) findViewById(R.id.buttonRedeem);
+        buttonSurvey = (Button) findViewById(R.id.buttonSurvey);
 
         buttonMission.setOnClickListener(this);
         buttonRedeem.setOnClickListener(this);
+        buttonSurvey.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -54,12 +57,14 @@ public class BusinessActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         Intent intentMission = new Intent (BusinessActivity.this, SurveyActivity.class);
-        //Intent intentRedeem = new Intent (BusinessActivity.this, RedeemActivity.class);
+        Intent intentSurvey = new Intent (BusinessActivity.this, SurveyTwoActivity.class);
 
         if (v == buttonMission) {
             startActivity(intentMission);
         } else if (v == buttonRedeem) {
             Toast.makeText(BusinessActivity.this, "Redeem Activity Coming Soon!", Toast.LENGTH_SHORT).show();
+        } else if (v == buttonSurvey) {
+            startActivity(intentSurvey);
         }
 
     }

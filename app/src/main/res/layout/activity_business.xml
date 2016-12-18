@@ -65,4 +65,14 @@
         android:layout_below="@+id/imageViewCompany"
         android:layout_alignStart="@+id/buttonMission" />
 
+    <Button
+        android:text="Survey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonMission"
+        android:layout_alignStart="@+id/buttonMission"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="115dp"
+        android:id="@+id/buttonSurvey" />
+
 </RelativeLayout>

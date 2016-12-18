@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 
@@ -24,6 +25,10 @@ public class SurveyActivity extends Activity implements View.OnClickListener, Co
     //users access this survey from the business page and will be taken back to the feed activity after completing the survey
     //users will receive points for submitting a survey or completing a mission, and these points will be reflected on Profile
 
+    //This activity was working, and then broke so we created a second survey
+    //However, the survey as it is written here is coded so to make it easier to aggregate the data for Market Research
+
+
 
     private Button buttonSubmit;
     private RadioButton radioButton1;
@@ -35,6 +40,9 @@ public class SurveyActivity extends Activity implements View.OnClickListener, Co
     private RadioButton radioButton7;
     private RadioButton radioButton8;
     private RadioButton radioButton9;
+    //private RadioGroup radioGroup1;
+    //private RadioGroup radioGroup2;
+    //private RadioGroup radioGroup3;
 
     private int Answer1 = 0;
     private int Answer2 = 0;
@@ -65,6 +73,9 @@ public class SurveyActivity extends Activity implements View.OnClickListener, Co
         radioButton7 = (RadioButton) findViewById(R.id.radioButton7);
         radioButton8 = (RadioButton) findViewById(R.id.radioButton8);
         radioButton9 = (RadioButton) findViewById(R.id.radioButton9);
+        //radioGroup1 = (RadioGroup) findViewById(R.id.radioGroup1);
+        //radioGroup2 = (RadioGroup) findViewById(R.id.radioGroup2);
+        //radioGroup3 = (RadioGroup) findViewById(R.id.radioGroup3);
 
 
         buttonSubmit.setOnClickListener(this);
@@ -77,7 +88,6 @@ public class SurveyActivity extends Activity implements View.OnClickListener, Co
         radioButton7.setOnCheckedChangeListener(this);
         radioButton8.setOnCheckedChangeListener(this);
         radioButton9.setOnCheckedChangeListener(this);
-
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -100,7 +110,6 @@ public class SurveyActivity extends Activity implements View.OnClickListener, Co
     public void onClick(View v) {
 
         if (v == buttonSubmit) {
-            Toast.makeText(SurveyActivity.this, "Thank you for participating in this Survey! +5 Points Added! ", Toast.LENGTH_LONG).show();
 
             surveyComplete();
 
@@ -111,9 +120,13 @@ public class SurveyActivity extends Activity implements View.OnClickListener, Co
 
     }
 
+
     public void surveyComplete() {
 
-       /* int Answer = 0;
+        Toast.makeText(SurveyActivity.this, "Thank you for participating in this Survey! +5 Points Added! ", Toast.LENGTH_LONG).show();
+
+        /*
+        int Answer1 = 0;
         int Answer2 = 0;
         int Answer3 = 0;
         int Answer4 = 0;
@@ -127,7 +140,6 @@ public class SurveyActivity extends Activity implements View.OnClickListener, Co
         //String answer = radioButton.getText().toString();
         //String answer2 = radioButton2.getText().toString();
 
-
         String answer1 = Integer.toString(Answer1);
         String answer2 = Integer.toString(Answer2);
         String answer3 = Integer.toString(Answer3);
@@ -137,9 +149,7 @@ public class SurveyActivity extends Activity implements View.OnClickListener, Co
         String answer7 = Integer.toString(Answer7);
         String answer8 = Integer.toString(Answer8);
         String answer9 = Integer.toString(Answer9);
-
         String email = mAuth.getCurrentUser().getEmail();
-        //String postTime = "";
 
         SurveyResult surveyResult = new SurveyResult (answer1, answer2, answer3, answer4, answer5,
                 answer6, answer7, answer8, answer9, email);
@@ -151,20 +161,12 @@ public class SurveyActivity extends Activity implements View.OnClickListener, Co
 
     }
 
+
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
         //original attempt at recording survey results but remained local on devices, used firebase
 
-        /*int Answer1 = 0;
-        int Answer2 = 0;
-        int Answer3 = 0;
-        int Answer4 = 0;
-        int Answer5 = 0;
-        int Answer6 = 0;
-        int Answer7 = 0;
-        int Answer8 = 0;
-        int Answer9 = 0;*/
 
         if (radioButton1.isChecked()) {
             Answer1++;
