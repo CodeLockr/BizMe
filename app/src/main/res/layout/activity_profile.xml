@@ -50,5 +50,14 @@
         android:layout_alignStart="@+id/imageViewProfile"
         android:id="@+id/textViewEmail" />
 
+    <Button
+        android:text="View my Points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textViewEmail"
+        android:layout_marginBottom="80dp"
+        android:id="@+id/buttonViewPoints" />
+
 
 </RelativeLayout>

@@ -25,6 +25,8 @@ public class ProfileActivity extends Activity implements View.OnClickListener {
     private TextView textViewEmail;
     private ImageView imageViewProfile;
 
+    private Button buttonViewPoints;
+
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
@@ -35,6 +37,9 @@ public class ProfileActivity extends Activity implements View.OnClickListener {
 
         textViewEmail = (TextView) findViewById(R.id.textViewEmail);
         imageViewProfile = (ImageView) findViewById(R.id.imageViewProfile);
+        buttonViewPoints = (Button) findViewById(R.id.buttonViewPoints);
+
+        buttonViewPoints.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -62,7 +67,10 @@ public class ProfileActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-
+        if (v == buttonViewPoints){
+            // Actual functionality for viewing user points coming soon...
+            Toast.makeText(ProfileActivity.this, "You have 5 points!", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
