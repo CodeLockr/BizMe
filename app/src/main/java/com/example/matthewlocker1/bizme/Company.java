@@ -13,7 +13,7 @@ public class Company {
     String bizLong;
     String description;
 
-    public Company () {};
+    public Company () {}
 
     public Company (String user, String password, String companyName, String bizLat,
                     String bizLong, String description){

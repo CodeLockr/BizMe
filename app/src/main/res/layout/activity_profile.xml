@@ -23,6 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView2"
+        android:layout_alignTop="@+id/progressBarBusiness1"
         android:layout_toEndOf="@+id/textViewName"
         android:layout_marginTop="10dp" />
 
@@ -35,21 +36,19 @@
         android:id="@+id/imageView3" />
 
     <TextView
+        android:text="Email:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewUserType"
+        android:layout_centerVertical="true"
+        android:layout_alignEnd="@+id/progressBarBusiness1" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textViewUserType"
         android:layout_alignStart="@+id/imageViewProfile"
         android:id="@+id/textViewEmail" />
-
-    <TextView
-        android:text="Email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textViewUserType"
-        android:layout_below="@+id/imageViewProfile"
-        android:layout_toEndOf="@+id/imageView2"
-        android:layout_marginStart="42dp"
-        android:layout_marginTop="145dp" />
 
 
 </RelativeLayout>
