@@ -168,6 +168,33 @@ public class SurveyTwoActivity extends Activity implements CompoundButton.OnChec
         Toast.makeText(SurveyTwoActivity.this, "Thank you for participating in this Survey!\n " +
                 "+5 Points Added! ", Toast.LENGTH_LONG).show();
 
+
+        /*
+                            new AlertDialog.Builder(SurveyTwoActivity.this)
+                                    .setMessage("Where?")
+                                    .setNegativeButton("Go to Feed", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(
+                                                DialogInterface dialogInterface, int i) {
+                                            Intent intentFeed = new Intent(SurveyTwoActivity.this, FeedActivity.class);
+                                            startActivity(intentFeed);
+                            // add Toasts to this for notification
+                                        }
+                                    })
+                                    .setPositiveButton("Go To Business Page", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            Intent intentBiz = new Intent(SurveyTwoActivity.this, BusinessActivity.class);
+                                            startActivity(intentBiz);
+                                        }
+
+
+                                    })
+                                    .show(); */
+
+
+
+
         Intent intentFeed = new Intent (SurveyTwoActivity.this, FeedActivity.class);
         startActivity(intentFeed);
 

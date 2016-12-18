@@ -110,7 +110,9 @@ public class BusinessActivity extends Activity implements View.OnClickListener {
             //startActivity(intentMission);
             Toast.makeText(BusinessActivity.this, "Additional Missions Coming Soon!", Toast.LENGTH_SHORT).show();
         } else if (v == buttonRedeem) {
-            Toast.makeText(BusinessActivity.this, "Redeem Activity Coming Soon!", Toast.LENGTH_SHORT).show();
+            Intent intentRedeem = new Intent (BusinessActivity.this, RedeemActivity.class);
+            startActivity(intentRedeem);
+
         } else if (v == buttonSurvey) {
             startActivity(intentSurvey);
         }
