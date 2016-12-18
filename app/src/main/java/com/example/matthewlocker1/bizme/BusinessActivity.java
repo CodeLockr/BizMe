@@ -42,9 +42,7 @@ public class BusinessActivity extends Activity implements View.OnClickListener {
         buttonSurvey = (Button) findViewById(R.id.buttonSurvey);
         textViewDeal = (TextView) findViewById(R.id.textViewDeal);
 
-        //buttonMission.setOnClickListener(this);
-        //buttonMission goes to a broken Survey, use buttonSurvey instead
-        //this will be fixed in future versions
+        buttonMission.setOnClickListener(this);
         buttonRedeem.setOnClickListener(this);
         buttonSurvey.setOnClickListener(this);
 
@@ -105,11 +103,12 @@ public class BusinessActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        Intent intentMission = new Intent (BusinessActivity.this, SurveyActivity.class);
+        //Intent intentMission = new Intent (BusinessActivity.this, SurveyActivity.class);
         Intent intentSurvey = new Intent (BusinessActivity.this, SurveyTwoActivity.class);
 
         if (v == buttonMission) {
-            startActivity(intentMission);
+            //startActivity(intentMission);
+            Toast.makeText(BusinessActivity.this, "Additional Missions Coming Soon!", Toast.LENGTH_SHORT).show();
         } else if (v == buttonRedeem) {
             Toast.makeText(BusinessActivity.this, "Redeem Activity Coming Soon!", Toast.LENGTH_SHORT).show();
         } else if (v == buttonSurvey) {

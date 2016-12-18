@@ -95,12 +95,15 @@ public class FeedActivity extends Activity implements View.OnClickListener {
         } else if (v == buttonBiz2) {
             Intent intentBiz2 = new Intent(FeedActivity.this, BusinessActivity.class);
             startActivity(intentBiz2);
+            Toast.makeText(this, "Beta Version Only Has Charley's, Redirecting Now", Toast.LENGTH_SHORT).show();
         } else if (v == buttonBiz3) {
             Intent intentBiz3 = new Intent(FeedActivity.this, BusinessActivity.class);
             startActivity(intentBiz3);
+            Toast.makeText(this, "Beta Version Only Has Charley's, Redirecting Now", Toast.LENGTH_SHORT).show();
         }  else if (v == buttonBiz4) {
             Intent intentBiz4 = new Intent(FeedActivity.this, BusinessActivity.class);
             startActivity(intentBiz4);
+            Toast.makeText(this, "Beta Version Only Has Charley's, Redirecting Now", Toast.LENGTH_SHORT).show();
         } else if (v == buttonToBusiness){
             Intent intentBusinessView = new Intent (FeedActivity.this, BizProfileActivity.class);
             startActivity(intentBusinessView);

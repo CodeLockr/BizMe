@@ -31,31 +31,13 @@
         android:id="@+id/buttonCreateSurvey" />
 
     <Button
-        android:text="View Survey"
+        android:text="View Survey Results"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_toEndOf="@+id/imageView"
         android:layout_marginStart="27dp"
         android:id="@+id/buttonViewSurvey" />
-
-    <TextView
-        android:text="Create Mission Here:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/editTextDealCreate"
-        android:layout_toStartOf="@+id/editTextDealCreate"
-        android:id="@+id/textView5" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_marginTop="49dp"
-        android:id="@+id/editTextDealCreate"
-        android:layout_below="@+id/buttonViewSurvey"
-        android:layout_alignParentEnd="true" />
 
     <Button
         android:text="Submit Deal"
@@ -74,4 +56,15 @@
         android:id="@+id/imageView"
         android:layout_below="@+id/textViewName"
         android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="49dp"
+        android:id="@+id/editTextDealCreate"
+        android:layout_below="@+id/buttonCreateSurvey"
+        android:layout_centerHorizontal="true"
+        android:hint="Create Deal Here" />
 </RelativeLayout>

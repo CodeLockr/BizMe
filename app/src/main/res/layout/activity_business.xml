@@ -21,25 +21,6 @@
         android:textSize="36sp"
         android:textColor="@color/colorPrimaryDark" />
 
-    <Button
-        android:text="Survey"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/buttonMission"
-        android:layout_alignStart="@+id/buttonMission"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="115dp"
-        android:id="@+id/buttonSurvey" />
-
-    <Button
-        android:text="Redeem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonRedeem"
-        android:layout_above="@+id/buttonSurvey"
-        android:layout_alignEnd="@+id/textViewCompanyName"
-        android:layout_marginEnd="17dp" />
-
     <TextView
         android:text="Deal: "
         android:layout_width="wrap_content"
@@ -66,5 +47,26 @@
         android:layout_marginTop="81dp"
         android:layout_below="@+id/textViewDeal"
         android:layout_alignStart="@+id/textViewCompanyName" />
+
+    <Button
+        android:text="Survey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonSurvey"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="51dp"
+        android:textSize="30sp"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <Button
+        android:text="Redeem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonRedeem"
+        android:layout_alignBaseline="@+id/buttonMission"
+        android:layout_alignBottom="@+id/buttonMission"
+        android:layout_toEndOf="@+id/buttonSurvey"
+        android:layout_marginStart="13dp" />
 
 </RelativeLayout>
