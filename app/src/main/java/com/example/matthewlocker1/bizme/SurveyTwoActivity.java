@@ -102,7 +102,7 @@ public class SurveyTwoActivity extends Activity implements CompoundButton.OnChec
 
         String email = mAuth.getCurrentUser().getEmail();
         String favorite = editTextAnswer.getText().toString();
-        String company = "Charleys";
+        String company = "Good Time Charley's";
 
         SurveyClass surveyClass = new SurveyClass (yes, no, sunday, tuesday, favorite, email, company);
 
@@ -129,15 +129,51 @@ public class SurveyTwoActivity extends Activity implements CompoundButton.OnChec
         //Toast.makeText(this, surveyClass.yes, Toast.LENGTH_SHORT).show();
         dataNewSurveySubmit3.setValue(surveyClass.sunday);
 
+        //////////////////////////////
+        //   UPDATING USER POINTS   //
+        //////////////////////////////
+
+        String compName = surveyClass.company;
+        CompanyProgress[] companyArray = new CompanyProgress[1];
+        companyArray[0] = new CompanyProgress(compName);
+
+        User user = new User(email, companyArray, 0);
+
+        companyArray[0].compTotal = companyArray[0].compTotal + 5;
+
+        /*
+        To calculate aggregate user total points, will eventually be able to loop through a
+        larger company array and sum the individual company progress points.
+
+        We were also having problems pushing the entire User object to firebase - that is why the
+        below code is only pushing the user total instead of the entire class.
+
+        In future versions, we will have to better structure the User, Company, CompanyProgress,
+        and Survey classes so they can all "talk" to each other (for example, the each survey class
+        should have a point value attached to it so when completed that value can be added to the
+        correct company in the array). This way when we have multiple companies, surveys, and
+        users, our app can change the add the points from the survey to the correct user's company
+        progress.
+        */
+
+        for (int i=0; i<1; i++){
+            user.userTotal = user.userTotal + companyArray[i].compTotal;
+        }
+
+        FirebaseDatabase database2 = FirebaseDatabase.getInstance();
+        DatabaseReference dataUsers = database2.getReference("Users");
+        DatabaseReference dataNewUser = dataUsers.push();
+        dataNewUser.setValue(user.userTotal);
+
+        Toast.makeText(SurveyTwoActivity.this, "Thank you for participating in this Survey!\n " +
+                "+5 Points Added! ", Toast.LENGTH_LONG).show();
 
         Intent intentFeed = new Intent (SurveyTwoActivity.this, FeedActivity.class);
         startActivity(intentFeed);
 
 
     }
-
-    //added menus
-
+    
     @Override
     public void onStart() {
         super.onStart();

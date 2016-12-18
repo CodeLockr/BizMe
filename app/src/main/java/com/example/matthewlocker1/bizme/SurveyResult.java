@@ -38,9 +38,6 @@ public class SurveyResult {
 
         this.email = email;
 
-
     }
-
-
 
 }
