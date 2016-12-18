@@ -44,6 +44,7 @@ public class BusinessActivity extends Activity implements View.OnClickListener {
 
         //buttonMission.setOnClickListener(this);
         //buttonMission goes to a broken Survey, use buttonSurvey instead
+        //this will be fixed in future versions
         buttonRedeem.setOnClickListener(this);
         buttonSurvey.setOnClickListener(this);
 
